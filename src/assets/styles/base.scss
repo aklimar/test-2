@@ -1,0 +1,85 @@
+@import "./fonts.scss";
+
+
+.scrollbar::-webkit-scrollbar {
+	height: 2px;
+
+	&-track {
+		background: #F1F4F8;
+	}
+
+	&-button:start:decrement,
+	&-button:end:increment {
+		background: #FFFFFF;
+		display: block;
+		width: 30px;
+	}
+
+	&-thumb {
+		background: rgb(0, 10, 255, .8);
+	}
+}
+
+*, 
+*::after,
+*::before {
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+
+	transition: background 0.1s ease-in-out, border 0.1s ease-in-out, box-shadow 0.1s ease-in-out, transform 0.1s ease-in-out, color 0.1s ease-in-out, opacity 0.1s ease-in-out, fill 0.1s ease-in-out, stroke 0.1s ease-in-out;
+}	
+
+*:focus, 
+*:active {
+	outline: none;
+	text-decoration: none;
+}
+
+html, 
+body {
+	background: #F1F4F8;
+	color: #000000;
+
+	font-family: "SF UI Text", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	
+	overflow-x: hidden;
+	height: 100%;
+	width: 100%;
+}
+
+a, 
+a:hover,
+a:visited {
+	color: inherit;
+	text-decoration: none;
+}
+
+input, 
+button,
+textarea {
+	background: transparent;
+	color: inherit;
+	font-family: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	height: 100%;
+	width: 100%;
+}
+
+#root {
+	min-height: 100%;
+	width: 100%;
+}

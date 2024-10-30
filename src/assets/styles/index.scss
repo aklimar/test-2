@@ -1,0 +1,56 @@
+@import "./base.scss";
+
+
+.blackout {
+	background: rgb(83, 98, 123, .2);
+	backdrop-filter: blur(3px);
+	-webkit-backdrop-filter: blur(3px);
+
+	position: fixed;
+	inset: 0;
+
+	pointer-events: none;
+	opacity: 0;
+
+	transition: opacity 0.3s ease-in-out;
+
+	height: 100%;
+	width: 100%;
+	z-index: 5;
+
+	&.active {
+		pointer-events: auto;
+		opacity: 1;
+	}
+}
+
+.container {
+	align-items: stretch;
+	display: flex;
+	gap: 15px;
+	
+	min-height: 100vh;
+	width: 100%;
+
+	&--records {
+		background: #FFFFFF;
+	}
+
+	&__content {
+		display: flex;
+		flex: 1 1 auto;
+		flex-direction: column;
+		gap: 25px;
+
+		overflow-x: hidden;
+		
+		width: 100%;
+	}
+}
+
+
+@media(max-width: 1024px) {
+	.container__content {
+		gap: 20px;
+	}
+}
